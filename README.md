@@ -15,12 +15,16 @@ It uses HazelCast to implement a cache cluster.
 4. Ready!
  
 ## How it works
-* First initilize embebbed Tomcat and H2 database. 
+* First app initilize embebbed Tomcat and H2 database. 
 * Load DDL (schema.sql) to H2 and load data (data.sql).
-* Then finish launching the app on port 8181
+* Finish launching the app on port 8181
+* Then the app is ready to create cache nodes and load data.
 
 
 ## Services
+
+All operations can be invoked by GET request:
+
 [Cache]
 * *http://localhost:8181/cachemanager/cache/add* : Creates cluster instance
 * *http://localhost:8181/cachemanager/cache/add?n=X* : Creates X cluster instances
