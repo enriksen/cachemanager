@@ -72,27 +72,23 @@ All operations can be invoked by GET request:
 
 ## Quickstart
 
-1. Start CacheManager
+1 - Start CacheManager
 ```
 java -jar cachemanager-0.1.0.jar
 ```
-
-2. Initialize 3 cache nodes
+2 - Initialize 3 cache nodes
 ```
 http://localhost:8181/cachemanager/cache/add?n=3
 ```
-
-3. Run loader
+3 - Run loader
 ```
 http://localhost:8181/cachemanager/loader/run
 ```
-
-4. Open Html Search Form
+4 - Open Html Search Form
 ```
 http://localhost:8181/cachemanager/search
 ```
-
-5. If prefer JSON response for WS integration
+5 - If prefer JSON response for WS integration
 ```
 http://localhost:8181/cachemanager/search/users?company=Google
 ```
