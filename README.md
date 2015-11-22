@@ -1,6 +1,6 @@
 # cachemanager
 
-Cache Manager is a proof of concept (PoC) to test the functionality of Hazelcast cluster cache.
+Cache Manager is a proof of concept (PoC) to test the functionality of Hazelcast cluster cache as a SOA application.
 
 It reads data from DataBase (H2 embebbed) and load it to a cache (HazelCast).
 
@@ -26,12 +26,14 @@ Includes 3 modules:
  
 ## How it works
 * First app initilize embebbed Tomcat and H2 database. 
-* Load DDL (schema.sql) to H2 and load data (data.sql, initially 150k reg).
+* Load DDL (schema.sql) to H2 and load data in DB (data.sql, initially 150k reg).
 * Finish launching the app on port 8181
 * Then the app is ready to create cache nodes and load data.
 * It uses Hibernate-JPA for DB access.
 * HazelCast client to read/write in cache cluster.
 * Thymeleaf + Datatables for View Layer.
+* CacheManager divides the load work on N threads (for deafult 3) to be prepared to operate with large amounts of data.
+* Include API REST and Return JSON response for interoperability with other services.
 
 
 ## Main EndPoints
