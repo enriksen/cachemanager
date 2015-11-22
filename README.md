@@ -36,13 +36,13 @@ All operations can be invoked by GET request:
 
 [Cache cluster Admin]
 * **http://localhost:8181/cachemanager/cache/add** : Creates cluster instance
-* **http://localhost:8181/cachemanager/cache/add?n=X** : Creates X cluster instances
+* **http://localhost:8181/cachemanager/cache/add?n=X** : Creates X cluster instances (no limits, warning with jvm Memory!)
 * **http://localhost:8181/cachemanager/cache/remove** : Delete cluster instance
 * **http://localhost:8181/cachemanager/cache/shutdown** : Delete all cluster instances
 * **http://localhost:8181/cachemanager/cache/status** : Show active cluster instances
 
 [Loader]
-* **http://localhost:8181/cachemanager/loader/run** : Load all data from DB to cache (By default uses 5 threads)
+* **http://localhost:8181/cachemanager/loader/run** : Load all data from DB to cache (By default uses 3 threads)
 * **http://localhost:8181/cachemanager/loader/run?t=X** : Use X threads to load all data from DB to cache 
 
 [Search]
