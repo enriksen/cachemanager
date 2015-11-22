@@ -7,6 +7,7 @@ It reads data from DataBase (H2 embebbed) and load it to a cache (HazelCast).
 Cachemanager uses SpringBoot to run as service. Don't need application server.
 
 Includes 3 modules:
+
 1. Cluster cache admin: to create and destroy cache nodes.
 2. Cache loader: to load data from DB to Cache.
 3. Cache viewer: to search data in cache.
@@ -24,6 +25,9 @@ Includes 3 modules:
 * Load DDL (schema.sql) to H2 and load data (data.sql).
 * Finish launching the app on port 8181
 * Then the app is ready to create cache nodes and load data.
+* Hibernate-JPA to DB access.
+* HazelCast client to read/write in cache cluster.
+* Thymeleaf + Datatables for View Layer.
 
 
 ## Main EndPoints
