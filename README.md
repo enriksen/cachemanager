@@ -92,5 +92,5 @@ http://localhost:8181/cachemanager/search
 
 5. If prefer JSON response for WS integration
 ```
-http://localhost:8181/cachemanager/users?company=Google
+http://localhost:8181/cachemanager/search/users?company=Google
 ```
