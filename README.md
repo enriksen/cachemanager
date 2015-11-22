@@ -17,7 +17,7 @@ Includes 3 modules:
 
 1. download (git clone https://github.com/enriksen/cachemanager.git)
 2. mvn install
-3. java -jar cachemanager\target\cachemanager-0.1.0.jar
+3. java -jar target\cachemanager-0.1.0.jar
 4. Ready!
  
 ## How it works
