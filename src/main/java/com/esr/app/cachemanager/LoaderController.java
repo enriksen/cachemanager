@@ -58,8 +58,8 @@ public class LoaderController {
 		Response response;
 		try {
 			if (t == null || t == 0) {
-				// Default 5 threads
-				t = 5;
+				// Default 3 threads
+				t = 3;
 			}
 
 			long startTime = System.nanoTime();
