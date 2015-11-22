@@ -15,17 +15,17 @@ Includes 3 modules:
 
 ## How to run
 
-1. download
+1. download (git clone https://github.com/enriksen/cachemanager.git)
 2. mvn install
 3. java -jar cachemanager\target\cachemanager-0.1.0.jar
 4. Ready!
  
 ## How it works
 * First app initilize embebbed Tomcat and H2 database. 
-* Load DDL (schema.sql) to H2 and load data (data.sql).
+* Load DDL (schema.sql) to H2 and load data (data.sql, initially 150k reg).
 * Finish launching the app on port 8181
 * Then the app is ready to create cache nodes and load data.
-* Hibernate-JPA to DB access.
+* It uses Hibernate-JPA for DB access.
 * HazelCast client to read/write in cache cluster.
 * Thymeleaf + Datatables for View Layer.
 
