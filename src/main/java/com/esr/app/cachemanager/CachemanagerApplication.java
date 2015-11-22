@@ -22,6 +22,8 @@ public class CachemanagerApplication {
         LOGGER.info("CacheManager Initialized ...");
         LOGGER.info("Launch http://localhost:8181/cachemanager/cache/add to create Cache Node...");
         LOGGER.info("Launch http://localhost:8181/cachemanager/loader/run to load data from DB to Cache...");
+        LOGGER.info("Launch http://localhost:8181/cachemanager/search in a browser to access the Search Form...");
+        LOGGER.info("Go to https://github.com/enriksen/cachemanager for more info...");
         
     }
     

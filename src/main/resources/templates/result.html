@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	
+	<link rel="stylesheet" href="datatables.min.css" />
+	<script type="text/javascript" src="datatables.min.js"></script>
+	
+	
+	<script th:inline="javascript">
+		/*<![CDATA[*/
+	
+		var url = /*[[@{/pagination}]]*/'';
+	
+		/*]]>*/
+	
+		$(document).ready(function() {
+			$('#example').DataTable({
+				"ajax" : url,
+				"ordering" : false,
+				"searching" : false,
+				"serverSide" : true,
+				"columns" : [ {
+					"data" : "name"
+				}, {
+					"data" : "company"
+				}, {
+					"data" : "phone"
+				}, {
+					"data" : "iban"
+				} ]
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<h1>Cache Search Form</h1>
+    <form action="#" th:action="@{/search}" th:object="${searchform}" method="post" id="searchForm">
+    	<p>
+    	Name: <input type="text" th:field="*{name}" />
+    	Company: <input type="text" th:field="*{company}" />
+        Phone: <input type="text" th:field="*{phone}" />
+        Iban: <input type="text" th:field="*{iban}" />
+        <input type="submit" value="Submit" />
+         
+        </p>
+    </form>
+<h1>Results</h1>
+<p>Processing Time: <span th:text="${time}" ></span>&nbsp;&nbsp;Cache Size: <span th:text="${cachesize}"></span></p>
+
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th align="left">Name</th>
+            <th align="left">Company</th>
+            <th align="left">Phone</th>
+            <th align="left">IBAN</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th align="left">Name</th>
+            <th align="left">Company</th>
+            <th align="left">Phone</th>
+            <th align="left">IBAN</th>
+        </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>

@@ -1,11 +1,14 @@
 package com.esr.app.cachemanager.domain;
 
+import java.util.List;
+
 /**
  * Object with response info.
  * <ul>
  * <li>status: OK, ERROR</li>
  * <li>time: Processing time</li>
  * <li>info: Operation's info, messages, ...</li>
+ * <li>data: UserCache List </li>
  * </ul>
  * 
  * @author Enrique Sanchez
@@ -19,6 +22,7 @@ public class Response {
 	private String status;
 	private String time;
 	private String info;
+	private List data;
 	
 	public Response(String status, String time, String info) {
 		super();
@@ -44,5 +48,13 @@ public class Response {
 	}
 	public void setInfo(String info) {
 		this.info = info;
+	}
+
+	public List getData() {
+		return data;
+	}
+
+	public void setData(List data) {
+		this.data = data;
 	}
 }
