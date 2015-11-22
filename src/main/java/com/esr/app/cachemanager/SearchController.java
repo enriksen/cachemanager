@@ -218,11 +218,15 @@ public class SearchController {
 					users = mapUsers.values();
 				}
 				numReg=users.size();
+				long end = System.nanoTime();
+				response=new Response(Response.OK, (end - start) / 1000000 + "ms","Num. registers: "+numReg);
+				response.setData(new ArrayList<UserCache>(users));
 			}
-			long end = System.nanoTime();
+			else{
+				response = new Response(Response.ERROR, null, "Unable to connect to cache ...");
+			}
 			
-			response=new Response(Response.OK, (end - start) / 1000000 + "ms","Num. registers: "+numReg);
-			response.setData(new ArrayList<UserCache>(users));
+			
 		} catch (Exception e) {
 			LOGGER.error("Fail get users from cache ...", e);
 			response = new Response(Response.ERROR, null, e.getStackTrace().toString());

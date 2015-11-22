@@ -17,7 +17,7 @@ import java.util.List;
 public class Response {
 
 	public static String OK="OK";
-	public static String ERROR="OK";
+	public static String ERROR="ERROR";
 	
 	private String status;
 	private String time;
