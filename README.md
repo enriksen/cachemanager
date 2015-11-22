@@ -12,10 +12,14 @@ Includes 3 modules:
 2. Cache loader: to load data from DB to Cache.
 3. Cache viewer: to search data in cache.
 
+### System requeriments
+- Java 1.7+
+- Apache Maven 3.x+
+
 
 ## How to run
 
-1. download (git clone https://github.com/enriksen/cachemanager.git)
+1. download source or git clone https://github.com/enriksen/cachemanager.git
 2. mvn install
 3. java -jar target\cachemanager-0.1.0.jar
 4. Ready!
