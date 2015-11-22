@@ -89,3 +89,8 @@ http://localhost:8181/cachemanager/loader/run
 ```
 http://localhost:8181/cachemanager/search
 ```
+
+5. If prefer JSON response for WS integration
+```
+http://localhost:8181/cachemanager/users?company=Google
+```
